@@ -1,0 +1,9 @@
+<td>{{item.name}}</td>
+<td>{{item.description}}</td>
+<td>{{item.cost}}</td>
+
+{{#if showContextMenu}}
+  {{#ember-wormhole to="destination"}}
+    {{context-menu x=x y=y item=item closeContextMenu=(action 'closeContextMenu')}}
+  {{/ember-wormhole}}
+{{/if}}
